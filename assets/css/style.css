@@ -1,0 +1,201 @@
+:root {
+  --bb-blue: #019afd;
+  --bb-darkblue: #1378db;
+  --white: #fff;
+  --black: #000;
+  --gray: #f8f9fa;
+}
+
+* {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+body {
+  --bs-body-font-family: "PT Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  min-height: 100vh;
+}
+
+.bg-bb {
+  background-color: var(--bb-blue) !important;
+}
+
+.border-bb {
+  --bs-border-color: var(--bb-blue) !important;
+}
+
+.text-bb {
+  color: var(--bb-blue) !important;
+}
+
+.btn-outline-bb {
+  --bs-btn-border-color: var(--bb-blue) !important;
+  --bs-btn-color: var(--bb-blue) !important;
+  --bs-btn-hover-bg: var(--bb-blue) !important;
+  --bs-btn-hover-color: var(--white) !important;
+  --bs-btn-active-bg: var(--bb-blue) !important;
+  --bs-btn-active-border-color: var(--bb-blue) !important;
+  --bs-btn-disabled-color: var(--bb-blue) !important;
+  --bs-btn-disabled-border-color: var(--white) !important;
+}
+
+.btn-bb {
+  --bs-btn-bg: var(--bb-blue) !important;
+  --bs-btn-color: var(--white) !important;
+  --bs-btn-hover-bg: var(--bs-btn-bg) !important;
+  --bs-btn-hover-color: var(--white) !important;
+  --bs-btn-active-bg: var(--bs-btn-bg) !important;
+  --bs-btn-active-color: var(--white) !important;
+  --bs-btn-active-border-color: var(--bs-btn-bg) !important;
+  --bs-btn-disabled-bg: var(--bb-blue) !important;
+  --bs-btn-disabled-color: var(--white) !important;
+}
+
+#topNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+#topNav a {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+#topNav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--bb-blue);
+  transition: width 0.3s ease-in-out;
+}
+#topNav a:hover::before {
+  width: 100%;
+}
+
+#topNav .offcanvas.offcanvas-end.show a,
+#topNav .offcanvas.offcanvas-end.showing a {
+  color: var(--black) !important;
+  background-color: var(--gray);
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  margin-bottom: 12px;
+  border: 1px solid var(--bb-blue);
+}
+
+.hero-fullpage {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/assets/img/image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  color: var(--white);
+}
+
+.hero-fullpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-small {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/img/example.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 25vh;
+  width: 100vw;
+  position: relative;
+  color: var(--white);
+  border-bottom: 6px solid var(--bb-blue);
+}
+
+.hero-small {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-links ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.footer-links li {
+  padding-left: 0; /* remove left padding */
+  padding-bottom: 3px;
+}
+.footer-links a {
+  color: var(--white);
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: var(--bb-blue);
+}
+
+.contact-box {
+  background-color: var(--gray);
+  border-radius: 5px;
+  padding: 20px;
+}
+.contact-box img {
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  .contact-box {
+    float: none !important;
+    width: 100% !important;
+  }
+}
+
+.contact-box .contact-phone {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--bb-blue);
+}
+
+@media screen and (max-width: 768px) {
+  #viplist .col-4 {
+    width: 100% !important;
+    margin-bottom: 35px;
+  }
+  footer .col-6 {
+    display: none;
+  }
+  footer .footer-links {
+    padding: 0 !important;
+    text-align: center;
+  }
+}
+.cb-img {
+  border-radius: 15px !important;
+}
+
+#changing-text {
+  transition: opacity 0.3s ease-in-out;
+  font-family: "Parisienne" !important;
+  background: linear-gradient(to right, #dfbd69, #926f34);
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  color: transparent;
+  font-size: 4rem;
+}
+
+#carsearch button {
+  background: 0 0;
+  border: 0;
+  font-size: 1.8rem;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Willkommen bei Busch & Brand</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/fonts/ptsans/css/all.min.css" />
+    <link rel="stylesheet" href="assets/fonts/parisienne/css/all.min.css" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico" />
+    <!-- Metas -->
+    <meta name="theme-color" content="#019afd" />
+    <meta property="og:site_name" content="Busch & Brand GmbH" />
+    <meta property="og:url" content="https://busch-brand.de/" />
+    <meta property="og:title" content="Startseite" />
+    <meta
+      property="og:image"
+      content="https://busch-brand.de/assets/img/logo_buschbrand.png"
+    />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-dark navbar-expand-lg" id="topNav">
+      <div class="container">
+        <button
+          class="navbar-toggler mb-3 pt-2"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#navbarOffcanvasLg"
+          aria-controls="navbarOffcanvasLg"
+          id="navToggler"
+        >
+          <i class="fa-solid fa-bars" id="menuIcon"></i> <span>MENÜ</span>
+        </button>
+        <div class="row w-100">
+          <div class="col"></div>
+          <div class="col">
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="navbarOffcanvasLg"
+              aria-labelledby="navbarOffcanvasLgLabel"
+            >
+              <div class="navbar-nav justify-content-end" id="mainNav">
+                <a class="nav-link mx-2" href="/autohaus">Autohaus</a>
+                <a class="nav-link mx-2" href="/immobilien">Immobilien</a>
+                <a class="nav-link mx-2" href="/sicherheit">Sicherheit</a>
+                <a class="nav-link mx-2" href="/unser-team">Unser Team</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- WELCOME -->
+    <div class="container-full hero-fullpage" id="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Willkommen bei <span id="changing-text">Qualität</span>.</h1>
+            <p class="mt-3">
+              Wir sind Ihr kompetenter Partner in Sachen
+              Sicherheitsdienstleistungen,<br />
+              Fahrzeughandel und Immobilienvertrieb.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const textElements = [
+        "Qualität",
+        "Einzigartigkeit",
+        "Perfektion",
+        "Busch & Brand",
+      ];
+      let currentIndex = 1;
+
+      function changeText() {
+        const changingTextElement = document.getElementById("changing-text");
+        changingTextElement.style.opacity = "0";
+        setTimeout(function () {
+          changingTextElement.textContent = textElements[currentIndex];
+          changingTextElement.style.opacity = "1";
+          currentIndex = (currentIndex + 1) % textElements.length;
+        }, 300);
+      }
+
+      setInterval(changeText, 4000);
+    </script>
+  </body>
+</html>
